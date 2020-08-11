@@ -1,0 +1,181 @@
+*,
+*::before,
+::after {
+    box-sizing: border-box;
+    font-family: 'Times New Roman', Times, serif;
+    font-weight: bold;
+}
+
+body {
+    padding: 0;
+    margin: 0;
+    background: linear-gradient(to right, #00AAFF, rgb(22, 110, 22));
+}
+
+.Calculator-grid {
+    display: Grid;
+    justify-content: center;
+    align-content: center;
+    min-height: 100vh;
+    grid-template-columns: repeat(4, 100px);
+    grid-template-rows: minmax(120px, auto) repeat(5, 100px);
+}
+@media screen and (max-width:550px){
+    .Calculator-grid {
+        
+        grid-template-columns: repeat(4, 60px);
+        grid-template-rows: minmax(70px, auto) repeat(5, 60px);
+    }
+}
+.Calculator-grid button{
+    cursor: pointer;
+    font-size:1.5rem ;
+    border: 1px solid white;
+    outline:none;
+    background-color: rgba(255,255,255, .75);
+}
+@media screen and (max-width:420px){
+    .Calculator-grid button{
+        font-size: 1rem;
+    }
+}
+.Calculator-grid button:hover{
+    background-color: rgba(255,255,255, .9);
+
+}
+.Span-Two{
+    grid-column:span 2 ;
+}
+.output{
+    grid-column: 1/-1;
+    background-color: rgba(0,0,0,0.75);
+    display: flex;
+    align-items: flex-end;
+    justify-content: space-around;
+    flex-direction: column;
+    padding: 10px;
+    word-wrap: break-word;
+    word-break: break-all;
+}
+.output .previous-operand {
+    color: rgba(255,255,255, .75);
+    font-size: 1.7rem;
+}
+.output .current-operand{
+    color:white;
+    font-size: 2.7rem;
+}
+
+@media (max-width:321){
+    .Calculator-grid {
+        display: Grid;
+        justify-content: center;
+        align-content: center;
+        min-height: 70vh;
+        grid-template-columns: repeat(4, 60px);
+        grid-template-rows: minmax(50px, auto) repeat(5, 40px);
+    }
+    .output .current-operand{
+        color:white;
+        font-size: 1.7rem;
+    }
+}
+.social-menu p{
+    display:flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    color:black;
+    font-size: 35px;
+    font-weight: bold;
+    margin-top: -50px;
+
+}
+.social-menu p a{
+    padding-left: 15px;
+}
+@media screen and (max-height:560px){
+    .social-menu p{
+        font-size:20px;
+        margin-top: -05px;
+    }
+    .social-menu p a{
+        padding-left: 5px;
+    }
+}
+@media screen and (max-height:620px) and (min-height:510px){
+    .social-menu p{ 
+        font-size:21px;
+        margin-top: -45px;
+    }
+    .social-menu p a{
+        padding-left: 5px;
+    }
+}
+@media screen and (max-height:761px) and (min-height:620px) and (max-width:500px){
+    .social-menu p{ 
+        font-size:21px;
+        margin-top: -95px;
+    }
+    .social-menu p a{
+        padding-left: 5px;
+    }
+}
+
+.social-menu ul{
+    position: absolute;
+    left: 50%;
+    padding: 0 px;
+    margin: 15px ;
+    transform: translate(-50%, -50%);
+    display: flex;
+}
+.social-menu ul li{
+    list-style: none;
+    margin:0 7px;
+  }
+  
+  .social-menu ul li .fa{
+     font-size:35px;
+     line-height: 70px;
+     transition: .6s;
+     color: #000;
+  
+    }
+    .social-menu ul li .fa:hover{ 
+        color: #fff;
+  
+    }
+  
+    .social-menu ul li a {
+        position: relative;
+        display:block;
+        width: 70px;
+        height: 70px;
+        border-radius: 50%;
+        background-color: #fff;
+        text-align: center;
+        transition: .6s;
+    }
+  .social-menu ul li a:hover {
+      transform:translate(0,-10px);
+  
+  }
+
+  .social-menu ul li:nth-child(1) a:hover{
+      background-color: #0077B5;
+  }
+  .social-menu ul li:nth-child(2) a:hover{
+      background-color: #cd201f;
+  }
+  .social-menu ul li:nth-child(3) a:hover{
+      background-color: #131418;
+  }
+  
+  .social-menu ul li:nth-child(4) a:hover{
+      background-color: black;
+  }
+ .social-menu ul li:nth-child(5) a:hover{
+    background-color: #eb4924;
+}
+
